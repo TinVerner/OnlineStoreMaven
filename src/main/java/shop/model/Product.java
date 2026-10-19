@@ -36,4 +36,8 @@ public class Product {
     public boolean isInStock() {
         return stockQuantity > 0;
     }
+
+    public boolean isOutOfStock() {
+        return stockQuantity <= 0;
+    }
 }
