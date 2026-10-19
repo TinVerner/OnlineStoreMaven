@@ -38,7 +38,7 @@ class OrderServiceTest {
         assertNotNull(order);
         assertEquals(2, order.getQuantity());
         assertEquals(5000.0, order.getTotalPrice());
-        assertEquals(9999999, product.getStockQuantity());
+        assertEquals(3, product.getStockQuantity());
     }
 
     @Test
