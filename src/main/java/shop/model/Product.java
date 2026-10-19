@@ -32,4 +32,8 @@ public class Product {
     public void setStockQuantity(int stockQuantity) {
         this.stockQuantity = stockQuantity;
     }
+
+    public boolean isInStock() {
+        return stockQuantity > 0;
+    }
 }
