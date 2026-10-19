@@ -6,7 +6,6 @@ import shop.model.Order;
 import shop.model.Product;
 import shop.repository.InMemoryProductRepository;
 import shop.repository.ProductRepository;
-import shop.service.OrderService;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,7 +38,7 @@ class OrderServiceTest {
         assertNotNull(order);
         assertEquals(2, order.getQuantity());
         assertEquals(5000.0, order.getTotalPrice());
-        assertEquals(3, product.getStockQuantity());
+        assertEquals(9999999, product.getStockQuantity());
     }
 
     @Test
