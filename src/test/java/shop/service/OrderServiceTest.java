@@ -103,4 +103,32 @@ class OrderServiceTest {
 
         assertEquals(5, product.getStockQuantity());
     }
+
+    @Test
+     void cannotCreateOrderWhenProductNotFound() {
+
+        ProductRepository repository =
+                new InMemoryProductRepository();
+
+        Customer customer =
+                new Customer(1, "Анна");
+
+        OrderService orderService =
+                new OrderService(repository);
+
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> orderService.createOrder(
+                        1,
+                        customer,
+                        999,
+                        1
+                )
+        );
+
+        assertEquals(
+                "Товар не найден",
+                exception.getMessage()
+        );
+    }
 }

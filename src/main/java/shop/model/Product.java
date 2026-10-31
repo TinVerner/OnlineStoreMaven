@@ -1,5 +1,4 @@
 package shop.model;
-
 public class Product {
     private final int id;
     private final String name;
