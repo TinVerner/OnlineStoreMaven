@@ -7,28 +7,22 @@
 
     <property name="charset" value="UTF-8"/>
 
-    <!-- Запрещаем символы табуляции -->
     <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
 
-    <!-- Максимальная длина строки -->
     <module name="LineLength">
         <property name="max" value="120"/>
     </module>
 
     <module name="TreeWalker">
 
-        <!-- Имя класса должно соответствовать Java Naming Convention -->
         <module name="TypeName"/>
 
-        <!-- Имена методов -->
         <module name="MethodName"/>
 
-        <!-- Имена параметров -->
         <module name="ParameterName"/>
 
-        <!-- Имена локальных переменных -->
         <module name="LocalVariableName"/>
 
     </module>
